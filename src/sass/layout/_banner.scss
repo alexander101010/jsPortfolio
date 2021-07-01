@@ -1,24 +1,28 @@
 .banner {
-  color: white;
-  background-color: purple;
-  // background-image: url(../../images/66668.jpg);
-  /* background-position: center; */
-  background-size: 600px;
   width: 100vw;
   height: 600px;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 2px solid var(--header-border);
+  border-bottom: 2px solid var(--header-border);
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-}
 
-.banner__bio {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #182739;
-  /* width: 600px; */
-  padding: 10px;
+  &__bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text-header);
+    // background-color: #182739;
+    /* width: 600px; */
+    padding: 10px;
+  }
+
+  &__photo {
+    height: 40rem;
+    border-radius: 50%;
+    border-right: 2px solid var(--accent);
+    // box-shadow: 0 4px 8px var(--accent-shadow);
+    // clip-path: circle(50% at 50% 50%);
+  }
 }
