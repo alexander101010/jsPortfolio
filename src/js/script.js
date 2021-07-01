@@ -72,7 +72,7 @@ const renderProjectCard = function (project) {
     <div class="project project__card project__${project.title}">
           <img
             class="project__card__image"
-            src="images/${project.imagePath}"
+            src="src/images/${project.imagePath}"
             alt="${project.imageDescription}"
           />
           <div class="project__card__infos">
