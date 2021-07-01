@@ -7,9 +7,13 @@
 @import 'base/typography';
 @import 'base/utilities';
 
+@import 'components/project-card';
+
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/grid';
 @import 'layout/navigation';
+@import 'layout/banner';
+@import 'layout/projects';
 
 @import 'pages/home';

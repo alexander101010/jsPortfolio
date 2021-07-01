@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #182739;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+}
+.nav__name {
+  padding-left: 150px;
+}
+
+.nav__links li {
+  display: inline;
+  padding: 15px;
+  font-size: 30px;
+  /* border-bottom: 2px solid white; */
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid #182739;
+}
+
+.nav__links a:hover {
+  border: 2px solid white;
+}
+
+.link__hover {
+  background-color: white;
+  color: #182739;
+}

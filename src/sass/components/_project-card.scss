@@ -1,0 +1,44 @@
+.project__card {
+  /* border: 2px solid red; */
+  width: 500px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+
+  &__infos {
+    padding: 15px;
+    color: white;
+    background: linear-gradient(150deg, #511845, #c70039);
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  &__description {
+    opacity: 0.7;
+    font-size: medium;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    vertical-align: middle;
+    width: 500px;
+    /* height: 300px; */
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    transition: transform 200ms ease-in-out;
+  }
+
+  &__link:hover {
+    /* opacity: 0.7; */
+    transform: scale(1.15);
+  }
+}
