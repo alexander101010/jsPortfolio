@@ -1,0 +1,45 @@
+html[data-theme='light'] {
+  // --bg-primary
+
+  --main-bg: $color-grey-light-1;
+  --text-header: #1c1c1c;
+  --text-paragraph: #585757;
+  --header-border: #bb86fc;
+  --accent: hsl(285, 91%, 52%);
+
+  // for light mode
+  //#1c1c1c; //— used mainly for titles and bold text.
+  // #585757; //— used primarily for body text.
+  // #969696; //— widely used for small text and to fill icons.
+  // #E8E8E8; //— used for small details such as borders, dividers and line colors.
+}
+
+//THEME 3 ---
+html[data-theme='dark'] {
+  --main-bg: #1c1c1c;
+  // --main-bg: #201a25;
+  --text-header: #e8e8e8;
+  --text-paragraph: #e8e8e8;
+  --header-border: #bb86fc;
+  --accent: hsl(285, 91%, 52%);
+  --accent2: #ffe53d;
+  --accent-shadow: hsl(285, 91%, 30%);
+}
+
+// COLORS
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #e8e8e8;
+$color-grey-medium-1: #e8e8e8;
+$color-grey-medium-2: #585757;
+
+$color-grey-dark: #777;
+$color-grey-dark-1: #999;
+$color-grey-darkest: #1c1c1c;
+
+$color-white: #fff;
+$color-black: #000;
+$color-accent: hsl(285, 91%, 52%);
+
+//FONT
+$default-font-size: 1.6rem;
