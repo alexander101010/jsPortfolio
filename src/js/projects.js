@@ -4,6 +4,7 @@ const boomzy = {
   title: 'boomzy',
   id: 'boomzy',
   url: 'www.boomzy.me',
+  repo: '',
   description:
     'Le Wagon Bootcamp final project; a skill-share platform built for retired people hoping to give back to and connect with their community.',
   languages: ['Ruby', 'Ruby on Rails', 'HTML5', 'CSS', 'JavaScript'],
@@ -15,6 +16,7 @@ projects.push(boomzy);
 
 const wheelborrow = {
   title: 'wheelborrow',
+  repo: '',
   id: 'wheelborrow',
   url: 'https://wheelborrow.herokuapp.com/',
   description:
@@ -30,6 +32,7 @@ const calculator = {
   title: 'calculator app',
   id: 'calculator',
   url: 'https://alexander101010.github.io/calculator-app/',
+  repo: 'https://github.com/alexander101010/alexander101010.github.io-calculator-app',
   description:
     'Frontend Mentor challenge and design. Practice for building layout with CSS Grid as well as computation and event handling with JavaScript.',
   languages: ['HTML5', 'CSS', 'Sass', 'JavaScript'],
