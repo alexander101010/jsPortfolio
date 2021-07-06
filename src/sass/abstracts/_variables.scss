@@ -1,11 +1,22 @@
 html[data-theme='light'] {
   // --bg-primary
 
-  --main-bg: $color-grey-light-1;
+  --main-bg: #f7f7f7;
+  --main-bg-light: #e8e8ee;
+
   --text-header: #1c1c1c;
   --text-paragraph: #585757;
+
   --header-border: #bb86fc;
+  --toggle-border: white;
+  --toggle-btn: white;
+
   --accent: hsl(285, 91%, 52%);
+  --accent-shadow: hsl(285, 91%, 30%);
+
+  // project card
+  --card-title-bg: hsl(285, 91%, 52%);
+  --card-title-bg: white;
 
   // for light mode
   //#1c1c1c; //— used mainly for titles and bold text.
@@ -16,14 +27,23 @@ html[data-theme='light'] {
 
 //THEME 3 ---
 html[data-theme='dark'] {
-  --main-bg: #1c1c1c;
+  // --main-bg: #1c1c1c;
+  --main-bg: rgb(0, 0, 0);
   // --main-bg: #201a25;
+  --main-bg-light: rgb(29, 29, 31);
   --text-header: #e8e8e8;
   --text-paragraph: #e8e8e8;
+
   --header-border: #bb86fc;
+  --toggle-border: #bb86fc;
+  --toggle-btn: #ffe53d;
+
   --accent: hsl(285, 91%, 52%);
   --accent2: #ffe53d;
   --accent-shadow: hsl(285, 91%, 30%);
+
+  // project card
+  --card-title-bg: black;
 }
 
 // COLORS
@@ -43,3 +63,16 @@ $color-accent: hsl(285, 91%, 52%);
 
 //FONT
 $default-font-size: 1.6rem;
+
+// Margins and spacing
+:root {
+  --left-margin: 8rem;
+  // --card-height-1: minmax(60rem, 1fr);
+  // different card heights for different img orientations: sq, port(rait - wider than high), rect (higher than wide)
+  --card-height-sq: 50rem;
+  @media (min-width: 1600px) {
+    --card-height-sq: 70rem;
+  }
+  --card-height-port: 65rem;
+  --card-height-rect: 65rem;
+}
