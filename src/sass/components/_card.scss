@@ -1,0 +1,87 @@
+.card {
+  // flip functionality
+  perspective: 150rem; // on the parent
+  -moz-perspective: 150rem; // prefix needed to make it work on mozilla firefox as well
+  position: relative;
+  height: var(--card-height-sq); // TODO: move height to outside dynamic class
+
+  &:hover &__side-front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side-back {
+    transform: rotateY(0);
+  }
+
+  //front and back styles//
+  &__side {
+    // background-color: goldenrod; // TODO:variable color
+    // background-color: hsl(285, 91%, 30%);
+    // border: 1px solid blueviolet; // TODO:variable color
+    height: var(--card-height-sq); //TODO: move height to outside dynamic class
+
+    transition: all 0.8s ease;
+    // font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; // hides the back of the element
+
+    &-front {
+      // display: grid;
+      // height: 80rem;
+      border-bottom: 2px solid var(--accent);
+      background-color: var(--main-bg-light);
+    }
+    &-back {
+      height: var(
+        --card-height-sq
+      ); //TODO: move height to outside dynamic class
+      transform: rotateY(-180deg);
+      background-image: linear-gradient(
+        to right bottom,
+        var(--accent-shadow),
+        var(--accent)
+      );
+    }
+  }
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      // background-color: var(--card-title-bg);
+      background-color: var(--main-bg-light);
+      background-color: var(--card-title-bg);
+
+      border: 1px solid var(--accent);
+      // justify-self: center;
+      // align-self: center;
+      color: var(--text-header);
+
+      margin-top: -40px;
+      font-size: 3rem;
+      // border: 1px solid black;
+      padding: 1rem 2rem;
+    }
+    &__description {
+      font-size: 1.8rem;
+      padding: 3rem;
+      color: var(--text-paragraph);
+      // padding-top: 0;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    min-height: 20rem;
+    // border-top: 1px solid var(--accent);
+
+    // height: auto;
+  }
+}
