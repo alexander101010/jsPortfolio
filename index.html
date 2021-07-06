@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav class="nav">
-      <h3 class="nav__name">alexbotwinick</h3>
+      <h3 class="nav__name">alexBotwinick</h3>
       <ul class="nav__links">
         <li class="nav__link">
           <a
@@ -28,44 +28,76 @@
         </li>
       </ul>
     </nav>
-    <div class="banner">
+    <section class="banner">
       <div class="banner__bio">
         <h1>alex botwinick</h1>
         <h2><span class="highlight">fullstack</span> web developer</h1>
       </div>
       <img src="./src/images/squareAlex.png" alt="Photo of me, Alex" class="banner__photo">
+    </section>
+    <div class="toggle__box">
+      <label class="switch">
+        <input type="checkbox" class="toggle__input">
+        <span class="slider round"></span>
+      </label>
+     
     </div>
 
     <div class="projects__container">
-      <!-- <div class="project project__card">
-        <img
-          class="project__card__image"
-          src="images/wheelborrow.png"
-          alt="image of tools hanging up in a workshop"
-          width="500px"
-        />
-        <div class="project__card__infos">
-          <div class="project__card__title">WheelBorrow</div>
-          <div class="project__card__description">
-            <p>
-              AirBNB clone. Why buy expensive tools that you only need once when
-              you could reduce waste and consumerism by borrowing from thy
-              neighbor?
-            </p>
-          </div>
-          <div class="project__card__footer">
-            <p>
-              ['Ruby', 'Ruby on Rails', 'Sass', 'HTML', 'CSS', 'JavaScript']
-            </p>
-            <a
-              href="https://wheelborrow.herokuapp.com/"
-              class="project__card__link"
-              target="_blank"
-              >Visit 🚀</a
-            >
+      <div class="card card-portfolio">
+        <div class="card__side card__side-front">
+          <img src="./src/images/squareAlex.png" alt="test" class="card__img">
+          <div class="card-details">
+            <h3 class="card-details__title">Portfolio</h3>
+            <p class="card-details__description">This is where the witty and meaningful, yet succinct, description will go, highlighting the goals of the project. But succinct, <span class="highlight">not wordy! </span></p>
           </div>
         </div>
-      </div> -->
+        <div class="card__side card__side-back">
+          <ul class="card__links">
+            <li><a href="https://www.github.com/alexander101010" class="card__link" target="_blank">Visit Repo</a></li>
+            <li><a href="https://www.github.com/alexander101010" class="btn-link repo">Visit Live Site</a></li>
+          </ul>
+          
+
+        </div>
+      </div>
+
+      <div class="card card-boomzy">
+        <div class="card__side card__side-front">
+          <img src="./src/images/boomzySquare.png" alt="boomzy" class="card__img">
+          <div class="card-details">
+            <h3 class="card-details__title">Boomzy</h3>
+            <p class="card-details__description">Le Wagon Bootcamp final group project. A skill-share platform built to retirees hoping to mentor and teach people in their community.</p>
+          </div>
+        </div>
+        <div class="card__side card__side-back">
+          <ul class="card__links">
+            <li><a href="https://www.github.com/alexander101010" class="card__link" target="_blank">Visit Repo</a></li>
+            <li><a href="https://www.github.com/alexander101010" class="btn-link repo">Visit Live Site</a></li>
+          </ul>
+          
+
+        </div>
+      </div>
+
+      <div class="card card-calculator">
+        <div class="card__side card__side-front">
+          <img src="./src/images/calcSquare.png" alt="boomzy" class="card__img">
+          <div class="card-details">
+            <h3 class="card-details__title">Calculator App</h3>
+            <p class="card-details__description">Challenge designed by Frontend Mentor. </p>
+          </div>
+        </div>
+        <div class="card__side card__side-back">
+          <ul class="card__links">
+            <li><a href="https://www.github.com/alexander101010" class="card__link" target="_blank">Visit Repo</a></li>
+            <li><a href="https://www.github.com/alexander101010" class="btn-link repo">Visit Live Site</a></li>
+          </ul>
+          
+
+        </div>
+      </div>
+     
     </div>
 
     <div class="footer">
@@ -76,9 +108,7 @@
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>
-      <a href="https://www.freepik.com/vectors/background"
-        >Background vector created by rawpixel.com - www.freepik.com</a
-      >
+      
     </div>
   </body>
 </html>
