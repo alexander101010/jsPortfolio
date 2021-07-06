@@ -1,11 +1,13 @@
 .banner {
   width: 100vw;
   height: 600px;
-  border-top: 2px solid var(--header-border);
+  // border-top: 2px solid var(--header-border);
   border-bottom: 2px solid var(--header-border);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: var(--main-bg-light);
+  transition: all 0.3s;
 
   &__bio {
     display: flex;
@@ -21,7 +23,7 @@
   &__photo {
     height: 40rem;
     border-radius: 50%;
-    border-right: 2px solid var(--accent);
+    // border-right: 2px solid var(--accent);
     // box-shadow: 0 4px 8px var(--accent-shadow);
     // clip-path: circle(50% at 50% 50%);
   }
