@@ -1,9 +1,32 @@
 .btn-link {
-  border: 1px solid white;
-  padding: 1rem 2rem;
-
-  a,
-  a:hover {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
     text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.4s;
+    font-size: 1.8rem;
+
+    cursor: pointer;
+    color: var(--btn-text);
+    background-color: var(--btn-bg);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+  // border: 1px solid var(--btn-border);
+  // padding: 1rem 3rem;
+  // border-radius: 10px;
+  // color: var(--btn-text);
+  // font-size: 1.8rem;
+
+  &:hover {
+    transform: translateY(-0.3px) scale(1.05);
+  }
+  &:active {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    color: var(--btn-text);
   }
 }
