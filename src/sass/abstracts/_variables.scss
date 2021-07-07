@@ -1,6 +1,4 @@
 html[data-theme='light'] {
-  // --bg-primary
-
   --main-bg: #f7f7f7;
   --main-bg-light: #e8e8ee;
 
@@ -9,14 +7,16 @@ html[data-theme='light'] {
 
   --header-border: #bb86fc;
   --toggle-border: white;
-  --toggle-btn: white;
+  --toggle-btn: #bb86fc;
 
   --accent: hsl(285, 91%, 52%);
   --accent-shadow: hsl(285, 91%, 30%);
 
   // project card
-  --card-title-bg: hsl(285, 91%, 52%);
+  // --card-title-bg: hsl(285, 91%, 52%);
   --card-title-bg: white;
+  --btn-bg: hsl(285, 91%, 30%);
+  --btn-text: white;
 
   // for light mode
   //#1c1c1c; //— used mainly for titles and bold text.
@@ -25,7 +25,6 @@ html[data-theme='light'] {
   // #E8E8E8; //— used for small details such as borders, dividers and line colors.
 }
 
-//THEME 3 ---
 html[data-theme='dark'] {
   // --main-bg: #1c1c1c;
   --main-bg: rgb(0, 0, 0);
@@ -44,6 +43,21 @@ html[data-theme='dark'] {
 
   // project card
   --card-title-bg: black;
+  --btn-bg: #ffe53d;
+  --btn-bg-hover: #ffe53d;
+  --btn-border: hsl(285, 91%, 30%);
+  --btn-text: hsl(285, 91%, 30%);
+  --btn-text-hover: hsl(285, 91%, 52%);
+  --btn-text-active: white;
+}
+
+$card-height: 65rem;
+
+@media (min-width: 2200px) {
+  $card-height: 90rem;
+}
+@media (min-width: 1800px) {
+  $card-height: 75rem;
 }
 
 // COLORS
@@ -69,10 +83,14 @@ $default-font-size: 1.6rem;
   --left-margin: 8rem;
   // --card-height-1: minmax(60rem, 1fr);
   // different card heights for different img orientations: sq, port(rait - wider than high), rect (higher than wide)
-  --card-height-sq: 50rem;
-  @media (min-width: 1600px) {
-    --card-height-sq: 70rem;
+  --card-height: 50rem;
+
+  @media (min-width: 2000px) {
+    --card-height: 80rem;
   }
-  --card-height-port: 65rem;
-  --card-height-rect: 65rem;
+  @media (min-width: 1600px) {
+    --card-height: 68rem;
+  }
+  // --card-height: 65rem;
+  // --card-height: 65rem;
 }
