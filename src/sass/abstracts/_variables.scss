@@ -2,21 +2,35 @@ html[data-theme='light'] {
   --main-bg: #f7f7f7;
   --main-bg-light: #e8e8ee;
 
+  // --nav-bg: hsl(285, 91%, 30%);
+  --nav-bg: #f7f7f7;
+
   --text-header: #1c1c1c;
   --text-paragraph: #585757;
 
   --header-border: #bb86fc;
   --toggle-border: white;
-  --toggle-btn: #bb86fc;
+  --toggle-btn: hsla(285, 91%, 52%, 0.788);
 
   --accent: hsl(285, 91%, 52%);
+  --accent2: #ffe53d;
   --accent-shadow: hsl(285, 91%, 30%);
 
   // project card
-  // --card-title-bg: hsl(285, 91%, 52%);
-  --card-title-bg: white;
+  --card-title-bg: hsl(285, 91%, 30%);
+  --card-title-text: #e8e8e8;
+
+  --lang-bg: #f7f7f7;
+  --lang-icons: #1c1c1c;
+
   --btn-bg: hsl(285, 91%, 30%);
-  --btn-text: white;
+  --btn-text: #e8e8e8;
+  --card-border: #d8d8d8;
+  --card-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+
+  --card-gradient-1: #f0f0f0;
+  --card-gradient-2: #dfdfdf;
+  // --card-border: black;
 
   // for light mode
   //#1c1c1c; //— used mainly for titles and bold text.
@@ -26,10 +40,11 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  // --main-bg: #1c1c1c;
   --main-bg: rgb(0, 0, 0);
-  // --main-bg: #201a25;
   --main-bg-light: rgb(29, 29, 31);
+
+  --nav-bg: rgb(0, 0, 0);
+
   --text-header: #e8e8e8;
   --text-paragraph: #e8e8e8;
 
@@ -42,11 +57,21 @@ html[data-theme='dark'] {
   --accent-shadow: hsl(285, 91%, 30%);
 
   // project card
-  --card-title-bg: black;
-  --btn-bg: #ffe53d;
+  --card-title-bg: black; // same as main-bg
+  --card-title-text: #e8e8e8;
+
+  --lang-bg: #3e3e3e;
+  --lang-icons: #f7f7f7;
+
+  --card-border: #969696;
+  --card-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  --card-gradient-1: #383838;
+  --card-gradient-2: #242424;
+
+  --btn-bg: hsl(285, 91%, 30%);
   --btn-bg-hover: #ffe53d;
   --btn-border: hsl(285, 91%, 30%);
-  --btn-text: hsl(285, 91%, 30%);
+  --btn-text: white;
   --btn-text-hover: hsl(285, 91%, 52%);
   --btn-text-active: white;
 }
