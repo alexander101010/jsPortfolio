@@ -1,8 +1,24 @@
+.section-projects {
+  // display: grid;
+  // justify-content: center;
+  // align-items: center;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+}
+
 .projects__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 7rem;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  grid-gap: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-around; // aligns rows of wrapped content
 
+  margin: 10rem;
   // grid-column: center-start / center-end;
-  margin: 15rem;
+  // display: flex;
+  // flex-wrap: wrap;
+  // max-width: 1140px;
 }
