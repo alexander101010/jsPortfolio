@@ -20,7 +20,7 @@ const boomzy = {
   repo: 'https://github.com/Marielle-de-Jong/boomzy',
   description:
     'Le Wagon Bootcamp final project; a skill-share platform built for retired people hoping to give back to and connect with their community.',
-  stack: ['ruby', 'rubyOnRails', 'html', 'css', 'javaScript', 'sass'],
+  stack: ['ruby', 'rubyOnRails', 'html', 'css', 'javaScript', 'sass', 'git'],
   imagePath: 'boomzySquare.png',
   imageDescription: 'Image of a mentor and student hard at work',
 };
@@ -33,7 +33,7 @@ const wheelborrow = {
   id: 'wheelborrow',
   url: 'https://wheelborrow.herokuapp.com/',
   description:
-    'AirBNB clone. Why buy expensive tools that you only need once when you could reduce waste and consumerism by borrowing from thy neighbor?',
+    'Le Wagon project - AirBNB clone. Why buy expensive tools that you only need once when you could reduce waste and consumerism by borrowing from thy neighbor?',
   stack: ['ruby', 'rubyOnRails', 'html', 'css', 'javaScript', 'sass'],
   imagePath: 'wheelborrowSquare.png',
   imageDescription: 'Image of tools hanging up in a workshop',
