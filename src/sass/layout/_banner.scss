@@ -1,23 +1,48 @@
-.banner {
-  width: 100vw;
-  height: 600px;
-  // border-top: 2px solid var(--header-border);
-  border-bottom: 2px solid var(--header-border);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.section-banner {
   background-color: var(--main-bg-light);
-  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding: 10rem;
+  min-height: 80rem;
+  height: 82vh;
+  // height: minmax(max-content, var(--banner-height));
+  border-bottom: 2px solid var(--header-border);
+  border-top: 2px solid var(--header-border);
+  // padding: 8rem 0;
+}
+
+.banner {
+  &__container {
+    // contains bio and img as siblings
+    width: 100vw;
+    // height: 75rem;
+    // height: calc(100vh - 18rem);
+    min-height: 60rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    @media only screen and (max-width: 700px) {
+      flex-direction: column-reverse;
+    }
+  }
 
   &__bio {
+    font-size: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    height: 10rem;
+    justify-content: space-between;
     align-items: center;
     color: var(--text-header);
-    // background-color: #182739;
-    /* width: 600px; */
-    padding: 10px;
+
+    &__name {
+    }
+    &__fullstack {
+    }
+    &__dev {
+    }
   }
 
   &__photo {
@@ -27,4 +52,26 @@
     // box-shadow: 0 4px 8px var(--accent-shadow);
     // clip-path: circle(50% at 50% 50%);
   }
+
+  // scroll btn box positioning
+  &__btn-box {
+    margin-bottom: 6rem;
+    height: 10rem;
+    // w20rem
+  }
+  &__arrow-icon {
+    margin-left: 2rem;
+  }
+}
+
+.scroll-down:hover {
+  .btn-arrow {
+    color: var(--arrow-hover);
+    // transform: scale(1.1) translateY(10px);
+    font-size: 35px;
+  }
+  //   ion-icon {
+  //     color: white;
+  //     transform: scale(1.1);
+  //   }
 }
