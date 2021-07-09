@@ -31,9 +31,9 @@ body {
   box-sizing: border-box;
   background-color: var(--main-bg);
 
-  @include respond(tab-port) {
-    padding: 0;
-  }
+  // @include respond(tab-port) {
+  //   padding: 0;
+  // }
 }
 
 ::selection {
