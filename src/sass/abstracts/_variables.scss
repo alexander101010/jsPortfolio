@@ -22,6 +22,7 @@ html[data-theme='light'] {
 
   --lang-bg: #f7f7f7;
   --lang-icons: #1c1c1c;
+  --arrow-hover: hsl(285, 91%, 30%);
 
   --btn-bg: hsl(285, 91%, 30%);
   --btn-text: #e8e8e8;
@@ -76,15 +77,6 @@ html[data-theme='dark'] {
   --btn-text-active: white;
 }
 
-$card-height: 65rem;
-
-@media (min-width: 2200px) {
-  $card-height: 90rem;
-}
-@media (min-width: 1800px) {
-  $card-height: 75rem;
-}
-
 // COLORS
 
 $color-grey-light-1: #f7f7f7;
@@ -106,16 +98,5 @@ $default-font-size: 1.6rem;
 // Margins and spacing
 :root {
   --left-margin: 8rem;
-  // --card-height-1: minmax(60rem, 1fr);
-  // different card heights for different img orientations: sq, port(rait - wider than high), rect (higher than wide)
-  --card-height: 50rem;
-
-  @media (min-width: 2000px) {
-    --card-height: 80rem;
-  }
-  @media (min-width: 1600px) {
-    --card-height: 68rem;
-  }
-  // --card-height: 65rem;
-  // --card-height: 65rem;
+  --banner-height: calc(100vh-10rem);
 }
