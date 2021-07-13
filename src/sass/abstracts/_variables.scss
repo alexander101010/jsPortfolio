@@ -4,13 +4,27 @@ html[data-theme='light'] {
 
   // --nav-bg: hsl(285, 91%, 30%);
   --nav-bg: #f7f7f7;
+  // --nav-bg: hsl(285, 91%, 30%);
+  --nav-btn-border: hsl(285, 91%, 30%);
+  --mobile-hamburger-bg: hsl(285, 91%, 52%);
+  --mobile-ham-gradient-1: white;
+  --mobile-ham-gradient-2: #bb86fc;
+  --mobile-ham-text: hsl(285, 91%, 30%);
+  --mobile-ham-text-bg-hover: hsl(285, 91%, 30%);
+  --mobile-ham-text-hover: #f7f7f7;
 
   --text-header: #1c1c1c;
   --text-paragraph: #585757;
+  --text-nav: #1c1c1c;
+  --text-nav-name: #e8e8e8;
 
   --header-border: #bb86fc;
+  // --header-border: hsl(285, 91%, 30%);
+
   --toggle-border: white;
   --toggle-btn: hsla(285, 91%, 52%, 0.788);
+
+  --img-shadow: rgba(8, 8, 8, 0.3);
 
   --accent: hsl(285, 91%, 52%);
   --accent2: #ffe53d;
@@ -20,13 +34,16 @@ html[data-theme='light'] {
   --card-title-bg: hsl(285, 91%, 30%);
   --card-title-text: #e8e8e8;
 
+  //stack icons
   --lang-bg: #f7f7f7;
   --lang-icons: #1c1c1c;
   --arrow-hover: hsl(285, 91%, 30%);
 
   --btn-bg: hsl(285, 91%, 30%);
   --btn-text: #e8e8e8;
+
   --card-border: #d8d8d8;
+  --card-border-back: #969696;
   --card-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
 
   --card-gradient-1: #f0f0f0;
@@ -45,13 +62,28 @@ html[data-theme='dark'] {
   --main-bg-light: rgb(29, 29, 31);
 
   --nav-bg: rgb(0, 0, 0);
+  --nav-btn-border: #ffe53d;
+  --mobile-hamburger-bg: hsl(285, 91%, 30%);
+  --mobile-ham-gradient-1: #310341;
+  --mobile-ham-gradient-2: hsl(285, 91%, 52%);
+  --mobile-ham-text: #f7f7f7;
+  // --mobile-ham-text-bg-hover: hsl(285, 91%, 30%);
+  --mobile-ham-text-bg-hover: #ffe53d;
+
+  --mobile-ham-text-hover: black; //#f7f7f7;
 
   --text-header: #e8e8e8;
   --text-paragraph: #e8e8e8;
+  --text-nav: #e8e8e8;
+  --text-nav-name: #e8e8e8;
 
-  --header-border: #bb86fc;
+  // --header-border: #bb86fc;
+  --header-border: hsl(285, 91%, 30%);
+
   --toggle-border: #bb86fc;
   --toggle-btn: #ffe53d;
+
+  --img-shadow: rgba(14, 14, 14, 0.7);
 
   --accent: hsl(285, 91%, 52%);
   --accent2: #ffe53d;
@@ -64,7 +96,8 @@ html[data-theme='dark'] {
   --lang-bg: #3e3e3e;
   --lang-icons: #f7f7f7;
 
-  --card-border: #969696;
+  --card-border-back: #969696;
+
   --card-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   --card-gradient-1: #383838;
   --card-gradient-2: #242424;
