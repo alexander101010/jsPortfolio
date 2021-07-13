@@ -1,0 +1,160 @@
+.mobile-nav {
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: var(--mobile-hamburger-bg);
+
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: absolute; //**
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1); // TODO:color
+    text-align: center;
+    cursor: pointer;
+
+    @media screen and (max-width: 700px) {
+      top: 0.5rem;
+      right: 25px;
+    }
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.5rem;
+    right: 3.5rem;
+    background-image: radial-gradient(
+      var(--mobile-ham-gradient-1),
+      var(--mobile-ham-gradient-2)
+    );
+    z-index: 1000;
+
+    // transition: transform 0.8s;
+    transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1);
+
+    // transform: scale(80); // move into :checked
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    // hide when checkbox not selected
+    width: 0;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.19, 0.47, 0.32, 1.26);
+  }
+
+  &__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__item {
+    margin: 2rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 3rem;
+      font-weight: 200;
+      padding: 1rem 3rem;
+      text-decoration: none;
+      color: var(--mobile-ham-text);
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        var(--mobile-ham-text-bg-hover) 50%
+      );
+      background-size: 250%;
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: var(--mobile-ham-text-hover); // TODO:color
+    }
+  }
+
+  //FUNCTIONALITY
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  //ICON
+  &__icon {
+    position: relative;
+    margin-top: 3.3rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: white; // TODO:color
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    // make middle line invisible when checked so we have an X rather than *
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    transform: rotate(-135deg);
+    top: 0;
+  }
+}
