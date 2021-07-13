@@ -57,7 +57,10 @@
       //   var(--accent-shadow),
       //   var(--accent)
       // );
-      border: 1px solid var(--card-border);
+      border: 1px solid var(--card-border-back);
+      // border: 1px solid var(#969696);
+
+      border-bottom: 2px solid var(--accent);
 
       background-image: linear-gradient(
         to right bottom,
@@ -144,10 +147,9 @@
     &-small {
       font-size: 40px;
     }
-
-    &__lang:hover {
-      // color: var(--accent);
-      opacity: 0.5;
-    }
+  }
+  &__lang:hover {
+    // color: var(--accent);
+    opacity: 0.5;
   }
 }
