@@ -1,13 +1,15 @@
 import { projects } from './projects.js';
 import { renderProjectCard } from './views/projectView.js';
 import { updateTheme } from './updateTheme.js';
+import { smoothScroll, uncheckInput } from './helpers.js';
 
 const projectContainer = document.querySelector('.projects__container');
 const themeToggleInput = document.querySelector('.toggle__input');
 
-// iterate over projects and render each card
-
+// *************************************************
 //*************DARK AND LIGHT THEME LOGIC*************
+// *************************************************
+
 // user preference in browser?
 const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 if (userPrefersDark.matches) {
@@ -20,7 +22,9 @@ themeToggleInput.addEventListener('click', e => {
   themeToggledDark ? updateTheme('dark') : updateTheme('light');
 });
 
-// ***********
+// *************************************************
+// *********** THEME TOGGLE ANIMATION **************
+// *************************************************
 const nav = document.querySelector('.nav');
 const toggleBox = document.querySelector('.toggle__box');
 
@@ -34,7 +38,41 @@ window.addEventListener('scroll', function (e) {
   }
 });
 
-// Dynamically add projects -- Commented out because the flip effect needed both sides to have consisent heights, which was difficult when considering various image aspect ratios and orientations
+// ***********************************************************
+// *************** Render Project Cards **********************
+// ***********************************************************
+// Dynamically add projects from imported projects --> array of objects
+// renderProjectCard(projectObject, targetForMarkupAddition)
 projects.forEach(project => renderProjectCard(project, projectContainer));
 
-// Move theme toggle up into right top corner when
+// *****************************************************************************************
+// **** Smooth scrolling using helper function (takes btnElement and targetScrollElement) ***
+// *****************************************************************************************
+const scrollProjectsBtn = document.querySelector('.scroll-down');
+const projectsSection = document.querySelector('#section-projects');
+
+smoothScroll(scrollProjectsBtn, projectsSection);
+
+const alexAvatar = document.querySelector('.banner__photo');
+const aboutMeSection = document.querySelector('#section-about');
+
+smoothScroll(alexAvatar, aboutMeSection);
+
+const navProjectsBtn = document.querySelector('#nav__btn-projects');
+const navAboutBtn = document.querySelector('#nav__btn-about');
+
+smoothScroll(navProjectsBtn, projectsSection);
+smoothScroll(navAboutBtn, aboutMeSection);
+
+// *************************************************************
+// Hide Overlay on mobile hamburger button after one of the selections is clicked
+// *************************************************************
+
+const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+const navInput = document.querySelector('#navi-toggle');
+
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    uncheckInput(navInput);
+  });
+});
