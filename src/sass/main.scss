@@ -9,13 +9,15 @@
 
 @import 'components/button';
 @import 'components/card';
+@import 'components/mobile-nav';
 @import 'components/project-card';
 @import 'components/theme-toggle';
 
+@import 'layout/about';
+@import 'layout/banner';
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/navigation';
-@import 'layout/banner';
 @import 'layout/projects';
 
 @import 'pages/home';
