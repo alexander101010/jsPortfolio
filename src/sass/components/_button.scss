@@ -30,3 +30,39 @@
     color: var(--btn-text);
   }
 }
+
+.btn-outline {
+  // outline: none;
+  &,
+  &:link,
+  &:visited {
+    // text-transform: uppercase;
+    text-decoration: none;
+    font-family: inherit;
+
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    transition: all 0.2s;
+
+    // transform-origin: left;
+    font-size: 2.5rem;
+
+    cursor: pointer;
+    color: var(--accent);
+    background-color: transparent;
+
+    border: 1px solid var(--accent);
+  }
+
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    background-color: var(--accent);
+    color: var(--main-bg);
+    transform: scale(1.1);
+    // padding: 2rem 5rem;
+  }
+
+  &:active {
+    transform: translateY(-3px);
+  }
+}
