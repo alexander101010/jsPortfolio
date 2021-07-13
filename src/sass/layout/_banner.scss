@@ -48,15 +48,23 @@
   &__photo {
     height: 40rem;
     border-radius: 50%;
+    transition: all 0.3s;
     // border-right: 2px solid var(--accent);
-    // box-shadow: 0 4px 8px var(--accent-shadow);
+    box-shadow: 0 1rem 2rem var(--img-shadow);
     // clip-path: circle(50% at 50% 50%);
+  }
+  &__photo:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 2rem 3rem var(--img-shadow);
   }
 
   // scroll btn box positioning
   &__btn-box {
-    margin-bottom: 6rem;
+    // margin-bottom: 4rem;
     height: 10rem;
+    display: flex;
+    align-items: flex-end;
     // w20rem
   }
   &__arrow-icon {
@@ -66,12 +74,9 @@
 
 .scroll-down:hover {
   .btn-arrow {
-    color: var(--arrow-hover);
-    // transform: scale(1.1) translateY(10px);
-    font-size: 35px;
+    color: var(--main-bg);
+
+    transform: scale(1.05);
+    // font-size: 35px;
   }
-  //   ion-icon {
-  //     color: white;
-  //     transform: scale(1.1);
-  //   }
 }
