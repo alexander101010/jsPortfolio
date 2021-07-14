@@ -3,14 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
     <title>Alex Botwinick | Portfolio</title>
     <link rel="stylesheet" href="src/css/style.css" />
     <script src="src/js/script.js" type="module" defer></script>
   </head>
   <body>
     <nav class="nav">
-      <h3 class="nav__name">alexBotwinick</h3>
+      <div class="mobile-nav">
+        <input type="checkbox" class="mobile-nav__checkbox" id="navi-toggle" />
+        <label for="navi-toggle" class="mobile-nav__button">
+          <span class="mobile-nav__icon">&nbsp;</span>
+        </label>
+
+        <div class="mobile-nav__background">&nbsp;</div>
+
+        <nav class="mobile-nav__nav">
+          <ul class="mobile-nav__list">
+            <li class="mobile-nav__item">
+              <a href="#section-about" class="mobile-nav__link">About me</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="#section-projects" class="mobile-nav__link">Projects</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a
+                href="https://github.com/alexander101010"
+                class="mobile-nav__link"
+                target="_blank"
+                >Github</a
+              >
+            </li>
+            <li class="mobile-nav__item">
+              <a
+                href="mailto:alexbotwinick@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mobile-nav__link"
+                >Email</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="nav__name-box"><h3 class="nav__name">alexBotwinick</h3></div>
+
       <ul class="nav__links">
         <li class="nav__link">
           <a
@@ -20,8 +66,12 @@
             >contact</a
           >
         </li>
-        <li class="nav__link"><a href="#"> projects </a></li>
-        <li class="nav__link"><a href="#"> about me </a></li>
+        <li class="nav__link">
+          <button class="nav__btn" id="nav__btn-projects">projects</button>
+        </li>
+        <li class="nav__link">
+          <button class="nav__btn" id="nav__btn-about">about me</button>
+        </li>
         <li class="nav__link">
           <a href="https://github.com/alexander101010" target="_blank">
             github
@@ -29,24 +79,42 @@
         </li>
       </ul>
     </nav>
-    <section class="banner">
-      <div class="banner__bio">
-        <h1>alex botwinick</h1>
-        <h2><span class="highlight">fullstack</span> web developer</h1>
+
+    <section class="section-banner">
+      <div class="banner__container">
+        <div class="banner__bio">
+          <!-- <h1 class="banner__bio__name">alex botwinick</h1> -->
+          <h1 class="banner__greeting banner__greeting-alex">
+            Hi! I'm <span class="highlight">Alex</span>.
+          </h1>
+          <h2 class="banner__greeting banner__greeting-meet">
+            Nice to meet you.
+          </h2>
+          <h2 class="banner__bio__fullstack">
+            <span class="highlight">fullstack JavaScript</span>
+          </h2>
+          <h2 class="banner__bio__dev">web developer</h2>
+        </div>
+        <img
+          src="./src/images/squareAlex.png"
+          alt="Photo of me, Alex"
+          class="banner__photo"
+        />
       </div>
-      <img src="./src/images/squareAlex.png" alt="Photo of me, Alex" class="banner__photo">
+      <div class="banner__btn-box">
+        <button class="btn-outline scroll-down">
+          Projects <span class="fas fa-caret-square-down btn-arrow"></span>
+        </button>
+      </div>
     </section>
     <div class="toggle__box">
       <label class="switch">
-        <input type="checkbox" class="toggle__input">
+        <input type="checkbox" class="toggle__input" />
         <span class="slider round"></span>
       </label>
-     
     </div>
-    <section class="section-projects">
-
+    <section class="section-projects" id="section-projects">
       <div class="projects__container">
-
         <!-- <div class="card card-portfolio">
           <div class="card__side card__side-front">
             <img src="./src/images/squareAlex.png" alt="test" class="card__img">
@@ -69,76 +137,22 @@
               <i title="React" class="devicon-react-original-wordmark card__lang"></i>
             </div>
           </div>
-        </div>
-        
-        <div class="card card-boomzy">
-          <div class="card__side card__side-front">
-            <img src="./src/images/boomzySquare.png" alt="boomzy" class="card__img">
-            <div class="card-details">
-              <h3 class="card-details__title">Boomzy</h3>
-              <p class="card-details__description">Le Wagon Bootcamp final group project. A skill-share platform built to retirees hoping to mentor and teach people in their community.</p>
-            </div>
-          </div>
-          <div class="card__side card__side-back">
-            <ul class="card__links">
-              <li><a href="https://www.github.com/alexander101010" class="btn-link card__link" target="_blank">Visit Repo</a></li>
-              <li><a href="https://www.github.com/alexander101010" class="btn-link repo">Visit Live Site</a></li>
-            </ul>
-            
-            
-          </div>
-        </div>
-        
-        <div class="card card-calculator">
-          <div class="card__side card__side-front">
-            <img src="./src/images/calcSquare.png" alt="boomzy" class="card__img">
-            <div class="card-details">
-              <h3 class="card-details__title">Calculator App</h3>
-              <p class="card-details__description">Challenge designed by Frontend Mentor. </p>
-            </div>
-          </div>
-          <div class="card__side card__side-back">
-            <ul class="card__links">
-              <li><a href="https://www.github.com/alexander101010" class="card__link" target="_blank">Visit Repo</a></li>
-              <li><a href="https://www.github.com/alexander101010" class="btn-link repo">Visit Live Site</a></li>
-            </ul>
-            
-            
-          </div>
-        </div>
-        
-        <div class="card card-wheelborrow">
-          <div class="card__side card__side-front">
-            <img src="./src/images/wheelborrowSquare.png" alt="Picture of tools" class="card__img">
-            <div class="card-details">
-              <h3 class="card-details__title">wheelborrow</h3>
-              <p class="card-details__description">AirBNB clone. Why buy expensive tools that you only need once when you could reduce waste and consumerism by borrowing from thy neighbor?</p>
-            </div>
-          </div>
-          <div class="card__side card__side-back">
-            <ul class="card__links">
-              <li><a href="https://www.github.com/alexander101010" class="card__link" target="_blank">Visit Repo</a></li>
-              <li><a href="https://www.github.com/alexander101010" class="btn-link repo">Visit Live Site</a></li>
-            </ul>
-            
-            
-          </div>
-        </div> -->
-        
+       </div> -->
       </div>
-    </div>
     </section>
-      
-      <div class="footer">
-        <p class="footer__paragraph">Text here</p>
-        <!-- <div class="footer-links">
+    <section class="section-about" id="section-about">
+      <div class="about__bio"></div>
+    </section>
+
+    <div class="footer">
+      <p class="footer__paragraph">Text here</p>
+      <!-- <div class="footer-links">
           <a href="#"><i class="fab fa-github"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-linkedin"></i></a>
         </div> -->
-        
-      </div>
+    </div>
   </body>
 </html>
