@@ -27,7 +27,9 @@ html[data-theme='light'] {
   --img-shadow: rgba(8, 8, 8, 0.3);
 
   --accent: hsl(285, 91%, 52%);
-  --accent2: #ffe53d;
+  // --accent2: #978097;
+  --accent2: #1c1c1c;
+
   --accent-shadow: hsl(285, 91%, 30%);
 
   // project card
@@ -63,9 +65,9 @@ html[data-theme='dark'] {
 
   --nav-bg: rgb(0, 0, 0);
   --nav-btn-border: #ffe53d;
-  --mobile-hamburger-bg: hsl(285, 91%, 30%);
-  --mobile-ham-gradient-1: #310341;
-  --mobile-ham-gradient-2: hsl(285, 91%, 52%);
+  --mobile-hamburger-bg: rgb(0, 0, 0);
+  --mobile-ham-gradient-1: hsl(285, 91%, 52%);
+  --mobile-ham-gradient-2: #310341;
   --mobile-ham-text: #f7f7f7;
   // --mobile-ham-text-bg-hover: hsl(285, 91%, 30%);
   --mobile-ham-text-bg-hover: #ffe53d;
