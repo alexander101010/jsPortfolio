@@ -15,19 +15,17 @@
     text-align: center;
     cursor: pointer;
 
-    @media screen and (max-width: 700px) {
-      top: 0.5rem;
-      right: 25px;
-    }
+    top: 0.5rem;
+    left: 1.5rem;
   }
 
   &__background {
-    height: 6rem;
-    width: 6rem;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
     position: absolute;
-    top: 0.5rem;
-    right: 3.5rem;
+    top: 0.9rem;
+    left: 1.8rem;
     background-image: radial-gradient(
       var(--mobile-ham-gradient-1),
       var(--mobile-ham-gradient-2)
@@ -97,6 +95,11 @@
   //FUNCTIONALITY
   &__checkbox:checked ~ &__background {
     transform: scale(80);
+    position: fixed;
+  }
+
+  &__checkbox:checked ~ &__button {
+    position: fixed;
   }
 
   &__checkbox:checked ~ &__nav {
