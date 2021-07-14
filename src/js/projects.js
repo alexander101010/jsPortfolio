@@ -19,7 +19,7 @@ const boomzy = {
   url: 'https://www.boomzy.me',
   repo: 'https://github.com/Marielle-de-Jong/boomzy',
   description:
-    'Le Wagon Bootcamp final project; a skill-share platform built for retired people hoping to give back to and connect with their community.',
+    'Le Wagon Bootcamp final project. A skill-share platform built for retired people hoping to give back to and connect with their community.',
   stack: ['ruby', 'rubyOnRails', 'html', 'css', 'javaScript', 'sass', 'git'],
   imagePath: 'boomzySquare.png',
   imageDescription: 'Image of a mentor and student hard at work',
