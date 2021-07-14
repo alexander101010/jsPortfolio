@@ -6,26 +6,48 @@
   align-items: center;
   // padding: 10rem;
   min-height: 80rem;
-  height: 82vh;
+  // height: 82vh;
+  height: calc(100vh - 8rem);
+
   // height: minmax(max-content, var(--banner-height));
   border-bottom: 2px solid var(--header-border);
   border-top: 2px solid var(--header-border);
-  // padding: 8rem 0;
+
+  @media only screen and (max-width: 600px) {
+    // flex-direction: column-reverse;
+    justify-content: space-between;
+    height: calc(100vh - 8rem);
+    padding-bottom: 5rem;
+  }
 }
 
 .banner {
   &__container {
     // contains bio and img as siblings
     width: 100vw;
-    // height: 75rem;
-    // height: calc(100vh - 18rem);
     min-height: 60rem;
+    // height: calc(100vh - 40rem);
+    // height: calc(80vh);
+
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+
     @media only screen and (max-width: 700px) {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
+    @media only screen and (max-width: 600px) {
+      height: calc(100vh - 20rem);
+    }
+
+    @media only screen and (min-width: 1800px) {
+      max-width: 1500px;
+    }
+  }
+
+  &__divider {
+    color: var(--header-border);
   }
 
   &__bio {
@@ -37,26 +59,60 @@
     align-items: center;
     color: var(--text-header);
 
-    &__name {
+    @media only screen and (max-width: 700px) {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      h2 {
+        font-size: 2.8rem;
+      }
     }
+
+    @media only screen and (max-width: 400px) {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
     &__fullstack {
+      border-top: 1px solid var(--accent2);
+      padding-top: 1rem;
+      animation: moveInBottom 3s ease-out;
     }
-    &__dev {
+  }
+
+  &__greeting {
+    &-alex {
+      animation: moveInLeft 3s ease-out;
+    }
+    &-meet {
+      padding-bottom: 1rem;
+      // opacity: 0;
+      animation: moveInRight 3s ease-out 3.5s;
     }
   }
 
   &__photo {
-    height: 40rem;
+    // height: 40rem;
+    max-width: 40rem;
+    width: 40%;
     border-radius: 50%;
     transition: all 0.3s;
-    // border-right: 2px solid var(--accent);
     box-shadow: 0 1rem 2rem var(--img-shadow);
-    // clip-path: circle(50% at 50% 50%);
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+      height: auto;
+      box-shadow: none;
+    }
   }
   &__photo:hover {
     cursor: pointer;
     transform: scale(1.02);
     box-shadow: 0 2rem 3rem var(--img-shadow);
+    @media only screen and (max-width: 600px) {
+      box-shadow: none;
+    }
   }
 
   // scroll btn box positioning
@@ -64,7 +120,7 @@
     // margin-bottom: 4rem;
     height: 10rem;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     // w20rem
   }
   &__arrow-icon {
