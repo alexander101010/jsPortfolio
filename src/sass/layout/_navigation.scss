@@ -1,31 +1,42 @@
 .nav {
   width: 100%;
+
+  // min-height: 8rem;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
-  // background-color: #182739;
+
+  align-items: center;
   color: var(--text-header);
-  padding: 2.5rem;
+  // padding: 2.5rem;
   font-size: 2rem;
 
-  // position: sticky;
-  // top: 0;
   background-color: var(--nav-bg);
   z-index: 10;
-  border-bottom: 2px solid var(--header-border);
   transition: all 0.5s;
 
-  &__name {
-    // padding-left: 150px;
-    margin-left: var(--left-margin);
-    color: var(--accent);
-    &:hover {
-      color: rgba($color-accent, 0.8);
-    }
+  @media only screen and (max-width: 700px) {
+    background-color: var(--header-border);
+    justify-content: flex-end;
+  }
 
-    @include respond(tab-land) {
-      // 1200px
-      margin-left: 1rem;
-    }
+  @media only screen and (min-width: 1800px) {
+    border-bottom: 2px solid var(--header-border);
+    position: absolute;
+    top: 0;
+  }
+
+  &__name-box {
+    height: 8rem;
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-border);
+  }
+
+  &__name {
+    color: var(--text-nav-name);
   }
 
   &__link {
@@ -38,24 +49,51 @@
 
   &__links a {
     text-decoration: none;
-    color: var(--text-header);
+    color: var(--text-nav);
+    border-bottom: 2px solid transparent;
 
-    // border-radius: 10px;
     padding: 10px;
-    // border: 2px solid var(--main-bg);
-    transition: all 0.2s;
+    transition: all 0.3s ease;
+  }
+
+  &__links {
+    margin-right: 2rem;
+    @media only screen and (max-width: 700px) {
+      display: none;
+    }
   }
 
   &__links a:hover {
     // border-bottom: 2px solid var(--main-bg);
-    border-bottom: 2px solid var(--accent2);
+    border-bottom: 2px solid var(--nav-btn-border);
+  }
 
-    // color: var(--main-bg);
-    // background-color: var(--accent2);
+  // buttons in nav-links (instead of anchor-tags)
+  &__btn {
+    font-family: inherit;
+    border: none;
+    padding: 10px;
+    font-size: 1.8rem;
+    display: inline;
+    background-color: transparent;
+    color: var(--text-nav);
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+  }
+
+  &__btn:hover {
+    border-bottom: 2px solid var(--nav-btn-border);
   }
 }
 
-.link__hover {
-  // background-color: white;
-  color: #182739;
+// a[href^='mailto:']::after {
+//   content: ' ✉️';
+// }
+
+/// MOBILE NAV CHECKBOX
+.mobile-nav {
+  @media only screen and (min-width: 700px) {
+    display: none;
+  }
 }
