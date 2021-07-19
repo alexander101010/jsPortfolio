@@ -18,7 +18,7 @@
     <script src="src/js/script.js" type="module" defer></script>
   </head>
   <body>
-    <nav class="nav">
+    <nav class="nav" id="nav">
       <div class="mobile-nav">
         <input type="checkbox" class="mobile-nav__checkbox" id="navi-toggle" />
         <label for="navi-toggle" class="mobile-nav__button">
@@ -88,12 +88,15 @@
             Hi! I'm <span class="highlight">Alex</span>.
           </h1>
           <h2 class="banner__greeting banner__greeting-meet">
-            Nice to meet you.
+            Nice to meet you!
           </h2>
-          <h2 class="banner__bio__fullstack">
-            <span class="highlight">fullstack JavaScript</span>
-          </h2>
-          <h2 class="banner__bio__dev">web developer</h2>
+          <div class="banner__bio__fullstack">
+            <h2>
+              <span class="highlight">fullstack JavaScript</span>
+            </h2>
+            <h2>web developer</h2>
+          </div>
+          <!-- <h2 class="banner__bio__dev">web developer</h2> -->
         </div>
         <img
           src="./src/images/squareAlex.png"
@@ -107,12 +110,19 @@
         </button>
       </div>
     </section>
+
     <div class="toggle__box">
       <label class="switch">
         <input type="checkbox" class="toggle__input" />
         <span class="slider round"></span>
       </label>
     </div>
+
+    <div class="scroll-to-top__box">
+      <i class="fas fa-caret-up scroll-to-top__icon"></i>
+      <!-- <p class="scroll-to-top__text">top</p> -->
+    </div>
+
     <section class="section-projects" id="section-projects">
       <div class="projects__container">
         <!-- <div class="card card-portfolio">
@@ -140,19 +150,22 @@
        </div> -->
       </div>
     </section>
+
     <section class="section-about" id="section-about">
-      <div class="about__bio"></div>
+      <div class="about__bio">
+        <h2 class="about__title section-title">About Me</h2>
+      </div>
     </section>
 
     <div class="footer">
       <p class="footer__paragraph">Text here</p>
-      <!-- <div class="footer-links">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div> -->
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
   </body>
 </html>
