@@ -23,20 +23,28 @@ themeToggleInput.addEventListener('click', e => {
 });
 
 // *************************************************
-// *********** THEME TOGGLE ANIMATION **************
+// *********** THEME TOGGLE / scrolltoTop ANIMATION **************
 // *************************************************
-const nav = document.querySelector('.nav');
+const nav = document.querySelector('#nav');
 const toggleBox = document.querySelector('.toggle__box');
+const scrollToTopBtn = document.querySelector('.scroll-to-top__box');
+smoothScroll(scrollToTopBtn, nav);
 
 window.addEventListener('scroll', function (e) {
   const scrollY = this.scrollY;
   if (scrollY > nav.offsetHeight) {
     toggleBox.style.top = '0';
+    scrollToTopBtn.style.opacity = '1';
   }
   if (scrollY < nav.offsetHeight) {
     toggleBox.style.top = '8rem';
+    scrollToTopBtn.style.opacity = '0';
   }
 });
+
+// *************************************************
+// *********** Scroll to Top FUNCTIONALITY **************
+// *************************************************
 
 // ***********************************************************
 // *************** Render Project Cards **********************
