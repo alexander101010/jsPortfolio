@@ -1,0 +1,35 @@
+.scroll-to-top {
+  &__box {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+
+    display: grid;
+    justify-items: center;
+
+    border: 1px solid var(--accent-shadow);
+    border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+
+    z-index: 100;
+
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &__icon {
+    font-size: 5rem;
+    color: var(--accent);
+  }
+  &__text {
+    text-transform: uppercase;
+  }
+
+  &__box:hover {
+    cursor: pointer;
+    background-color: var(--accent);
+  }
+  &__box:hover &__icon {
+    color: var(--main-bg);
+  }
+}
