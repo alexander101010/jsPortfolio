@@ -4,6 +4,11 @@
     transform: translateX(-10rem);
   }
 
+  30% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
   80% {
     opacity: 0.8;
     transform: translateX(1rem);
@@ -16,6 +21,11 @@
 
 @keyframes moveInRight {
   0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  50% {
     opacity: 0;
     transform: translateX(10rem);
   }
@@ -36,8 +46,19 @@
     transform: translateY(3rem);
   }
 
+  50% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@keyframes rotate360 {
+  to {
+    transform: rotateY(360deg);
   }
 }
