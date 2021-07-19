@@ -1,12 +1,103 @@
 .footer {
-  height: 30rem;
+  min-height: 30rem;
   width: 100%;
   background-color: var(--main-bg);
-  color: white;
-  a {
-    color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  // padding: 10rem;
+  font-size: 1.5rem;
+  @media screen and (max-width: 1040px) {
+    font-size: 2rem;
   }
-  a:hover {
-    color: gray;
+
+  @media screen and (max-width: 600px) {
+    font-size: 2.5rem;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 15rem;
+    // margin-top: 10rem;
+    @media screen and (max-width: 1040px) {
+      flex-direction: column;
+    }
+  }
+
+  &__navigation {
+    width: 40%;
+    border-top: 2px solid var(--accent-shadow);
+    padding-top: 2rem;
+    display: inline-block;
+    text-align: center;
+
+    @media screen and (max-width: 1040px) {
+      width: 100%;
+      text-align: center;
+      border: none;
+    }
+    @media screen and (max-width: 600px) {
+      width: 90%;
+      text-align: center;
+      border-top: 2px solid var(--accent-shadow);
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: var(--text-footer);
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.4s;
+      background-color: var(--main-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    &:hover,
+    &:active {
+      box-shadow: var(--card-box-shadow);
+      transform: rotate(-1deg) scale(1.2);
+      color: var(--accent);
+    }
+  }
+
+  &__text {
+    border-top: 2px solid var(--accent-shadow);
+    padding-top: 2rem;
+
+    color: var(--text-footer);
+    width: 40%;
+    text-align: center;
+
+    @media screen and (max-width: 1040px) {
+      width: 100%;
+      border: none;
+      padding-top: 0.5rem;
+    }
+  }
+
+  &__paragraph {
+    padding: 0.5rem 1rem;
+    // font-size: 1.8rem;
   }
 }
