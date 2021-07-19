@@ -1,3 +1,15 @@
 .highlight {
   color: $color-accent;
 }
+
+.section-title {
+  font-size: 5rem;
+  color: var(--text-header);
+  margin-top: 8rem;
+  text-align: center;
+
+  &:hover {
+    color: var(--accent);
+    // transform: skewX(0deg) rotate(-5deg);
+  }
+}
