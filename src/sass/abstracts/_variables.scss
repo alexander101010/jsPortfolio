@@ -17,6 +17,8 @@ html[data-theme='light'] {
   --text-paragraph: #585757;
   --text-nav: #1c1c1c;
   --text-nav-name: #e8e8e8;
+  --text-footer: #585757;
+  --text-footer-hover-bg: #1c1c1c;
 
   --header-border: #bb86fc;
   // --header-border: hsl(285, 91%, 30%);
@@ -78,6 +80,8 @@ html[data-theme='dark'] {
   --text-paragraph: #e8e8e8;
   --text-nav: #e8e8e8;
   --text-nav-name: #e8e8e8;
+  --text-footer: #e8e8e8;
+  --text-footer-hover-bg: transparent;
 
   // --header-border: #bb86fc;
   --header-border: hsl(285, 91%, 30%);
@@ -134,4 +138,10 @@ $default-font-size: 1.6rem;
 :root {
   --left-margin: 8rem;
   --banner-height: calc(100vh-10rem);
+
+  --left-animation: 3s;
+  --rotate-speed: 10s;
+
+  --cube-unit: 35px;
+  --box-color: hsl(285, 91%, 30%);
 }
