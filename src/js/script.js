@@ -42,10 +42,6 @@ window.addEventListener('scroll', function (e) {
   }
 });
 
-// *************************************************
-// *********** Scroll to Top FUNCTIONALITY **************
-// *************************************************
-
 // ***********************************************************
 // *************** Render Project Cards **********************
 // ***********************************************************
@@ -53,13 +49,18 @@ window.addEventListener('scroll', function (e) {
 // renderProjectCard(projectObject, targetForMarkupAddition)
 projects.forEach(project => renderProjectCard(project, projectContainer));
 
-// *****************************************************************************************
-// **** Smooth scrolling using helper function (takes btnElement and targetScrollElement) ***
-// *****************************************************************************************
+// ***************************************************************
+// Smooth scrolling using helper function (takes btnElement and targetScrollElement) ***
+// **************************************************************
 const scrollProjectsBtn = document.querySelector('.scroll-down');
 const projectsSection = document.querySelector('#section-projects');
+const footerProjectsLink = document.querySelector('#footer-projects-link');
+footerProjectsLink.addEventListener('click', e => {
+  e.preventDefault(); // prevent a-tag from moving to section right away, allowing for smooth scroll instead
+});
 
 smoothScroll(scrollProjectsBtn, projectsSection);
+smoothScroll(footerProjectsLink, projectsSection);
 
 const alexAvatar = document.querySelector('.banner__photo');
 const aboutMeSection = document.querySelector('#section-about');
