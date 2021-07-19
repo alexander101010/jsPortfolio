@@ -78,18 +78,22 @@
     &__fullstack {
       border-top: 1px solid var(--accent2);
       padding-top: 1rem;
-      animation: moveInBottom 3s ease-out;
+      text-align: center;
+      // animation: moveInBottom calc(var(--left-animation) * 5) ease-out;
+      // animation: rotate360 var(--rotate-speed) infinite linear;
     }
   }
 
   &__greeting {
+    /* animation:@keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
     &-alex {
-      animation: moveInLeft 3s ease-out;
+      // animation: moveInLeft var(--left-animation) ease-out;
     }
     &-meet {
       padding-bottom: 1rem;
       // opacity: 0;
-      animation: moveInRight 3s ease-out 3.5s;
+      // animation: moveInRight calc(var(--left-animation) * 2.5) ease-out;
     }
   }
 
@@ -100,6 +104,7 @@
     border-radius: 50%;
     transition: all 0.3s;
     box-shadow: 0 1rem 2rem var(--img-shadow);
+
     @media only screen and (max-width: 600px) {
       width: 90%;
       height: auto;
@@ -125,6 +130,7 @@
   }
   &__arrow-icon {
     margin-left: 2rem;
+    animation: rotate360 var(--rotate-speed) infinite linear;
   }
 }
 
