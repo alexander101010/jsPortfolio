@@ -2,7 +2,7 @@ import { capitalize } from '../helpers.js';
 
 export const renderProjectCard = function (project, target) {
   const html = `
-    <div class="card card-${project.title}">
+    <div class="card card-${project.title.split(' ')[0]}">
       <div class="card__side card__side-front">
         <img src="./src/images/${project.imagePath}" alt="${
     project.imageDescription
@@ -16,13 +16,21 @@ export const renderProjectCard = function (project, target) {
         <ul class="card__links">
           <li><a href="${
             project.repo
-          }" target="_blank" class="btn-link repo"><i class="devicon-github-original"></i>  |  Github Repo </a></li>
+          }" target="_blank" class="btn-link repo"><i class="devicon-github-original"></i>  Github Repo </a></li>
           <li><a href="${
             project.url
           }" target="_blank" class="btn-link live-site">Visit Live Site</a></li>
         </ul>
         <div class="card__stack card__stack--${project.id}">
           ${renderIcons(project.stack)}
+        </div>
+        <div class="card__links-mobile">
+          <a href="${
+            project.repo
+          }" target="_blank" class="card__link-mobile"><i class="devicon-github-original"></i> Repo </a></li>
+          <a href="${
+            project.url
+          }" target="_blank" class="card__link-mobile">Visit Site</a>
         </div>
       </div>
     </div>
