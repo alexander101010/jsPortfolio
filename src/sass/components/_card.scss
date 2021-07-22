@@ -3,14 +3,8 @@
   perspective: 150rem; // on the parent
   -moz-perspective: 150rem; // prefix needed to make it work on mozilla firefox as well
   position: relative;
-  // height: var(--card-height); // TODO: move height to outside dynamic class
-  // min-width: 300px;
   width: 40rem;
   height: 65rem;
-  // box-shadow: var(--card-box-shadow); // doesnt look good with card rotation
-  // border-radius: 20px 20px 0 0;
-
-  // overflow: hidden;
 
   &:hover {
     box-shadow: none;
@@ -41,24 +35,15 @@
     &-front {
       // display: grid;
       // height: 80rem;
-      border-bottom: 2px solid var(--accent);
       background-color: var(--main-bg-light);
-      border-right: 1px solid #969696;
-      border-left: 1px solid #969696;
-      border-top: 1px solid #969696;
-      // border-top: 1px solid var(--accent);
-    }
-    &-back {
-      // height: var(--card-height); //TODO: move height to outside dynamic class
-      transform: rotateY(-180deg);
+      border: 1px solid #969696;
 
-      // background-image: linear-gradient(
-      //   to right bottom,
-      //   var(--accent-shadow),
-      //   var(--accent)
-      // );
+      border-bottom: 2px solid var(--accent);
+    }
+
+    &-back {
+      transform: rotateY(-180deg);
       border: 1px solid var(--card-border-back);
-      // border: 1px solid var(#969696);
 
       border-bottom: 2px solid var(--accent);
 
@@ -77,35 +62,25 @@
     align-items: center;
 
     &__title {
-      // background-color: var(--card-title-bg);
-      // background-color: var(--main-bg-light);
       background-color: var(--card-title-bg);
-
       border: 1px solid var(--accent);
-      // justify-self: center;
-      // align-self: center;
-      color: var(--card-title-text);
-
-      margin-top: -40px;
-      font-size: 3rem;
-      // border: 1px solid black;
       padding: 1rem 2rem;
+      color: var(--card-title-text);
+      font-size: 3rem;
+      transform: translateY(-50%);
+
+      // margin-top: -40px;
     }
     &__description {
       font-size: 1.8rem;
-      padding: 3rem;
+      padding: 1.5rem 3rem;
       color: var(--text-paragraph);
-      // padding-top: 0;
     }
   }
 
   &__img {
     width: 100%;
-    min-height: 20rem;
     overflow: hidden;
-    // border-top: 1px solid var(--accent);
-
-    // height: auto;
   }
 
   // links/buttons on back of card
@@ -117,6 +92,10 @@
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
+  }
+
+  &__links-mobile {
+    display: none;
   }
 
   //
@@ -133,10 +112,6 @@
     background-color: var(--lang-bg);
     box-shadow: 0 0.5rem 0.75rem rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-
-    // title {
-    //   color: purple;
-    // }
   }
 
   &__lang {
@@ -151,5 +126,86 @@
   &__lang:hover {
     // color: var(--accent);
     opacity: 0.5;
+  }
+  /// *************************************************************
+  // *** DISABLE CARD FLIP ON MOBILE /////////////////////////////////
+  // *************************************************************
+  @media screen and (max-width: 700px) {
+    width: 40rem;
+    height: auto;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:hover &__side-front {
+      transform: rotateY(0);
+    }
+
+    &:hover &__side-back {
+      transform: rotateY(0);
+    }
+
+    //front and back styles//
+    &__side {
+      height: auto;
+      position: relative;
+
+      &-front {
+        background-color: var(--main-bg-light);
+        border: none;
+      }
+
+      &-back {
+        transform: rotateY(0);
+        border: none;
+
+        border-bottom: 2px solid var(--accent);
+        background-color: var(--main-bg-light);
+        background-image: none;
+      }
+    }
+
+    // links/buttons on back of card
+    &__links {
+      display: none;
+    }
+
+    &__links-mobile {
+      display: flex;
+      margin: 1rem 2rem 3rem 2rem;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        border-radius: 20px;
+
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        background-color: var(--card-title-bg);
+        border: 1px solid var(--accent);
+        padding: 1rem 2rem;
+        color: var(--card-title-text);
+      }
+    }
+
+    //
+    &__stack {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin: 0;
+      padding: 2rem;
+      border-radius: none;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &__lang {
+      font-size: 30px;
+      padding: 0 0.25rem;
+      &-small {
+        font-size: 30px;
+      }
+    }
   }
 }
