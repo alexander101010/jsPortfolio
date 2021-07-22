@@ -4,20 +4,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // padding: 10rem;
   min-height: 80rem;
-  // height: 82vh;
   height: calc(100vh - 8rem);
 
-  // height: minmax(max-content, var(--banner-height));
   border-bottom: 2px solid var(--header-border);
   border-top: 2px solid var(--header-border);
 
   @media only screen and (max-width: 600px) {
-    // flex-direction: column-reverse;
     justify-content: space-between;
-    height: calc(100vh - 8rem);
-    padding-bottom: 5rem;
   }
 }
 
@@ -26,8 +20,6 @@
     // contains bio and img as siblings
     width: 100vw;
     min-height: 60rem;
-    // height: calc(100vh - 40rem);
-    // height: calc(80vh);
 
     display: flex;
     justify-content: space-around;
@@ -35,9 +27,8 @@
 
     @media only screen and (max-width: 700px) {
       flex-direction: column;
+      // justify-content: space-between;
       justify-content: space-evenly;
-    }
-    @media only screen and (max-width: 600px) {
       height: calc(100vh - 20rem);
     }
 
@@ -54,46 +45,32 @@
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    height: 10rem;
-    justify-content: space-between;
-    align-items: center;
+    width: 50%;
+    justify-content: space-evenly;
+    // align-items: center;
     color: var(--text-header);
+
+    h1,
+    h2 {
+      // font-size: 2.8rem;
+      padding: 1rem 4rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
 
     @media only screen and (max-width: 700px) {
       align-items: center;
       justify-content: center;
       width: 100%;
-
-      h2 {
-        font-size: 2.8rem;
-      }
+      margin-top: 5rem;
     }
 
     @media only screen and (max-width: 400px) {
       h2 {
         font-size: 2rem;
       }
-    }
-
-    &__fullstack {
-      border-top: 1px solid var(--accent2);
-      padding-top: 1rem;
-      text-align: center;
-      // animation: moveInBottom calc(var(--left-animation) * 5) ease-out;
-      // animation: rotate360 var(--rotate-speed) infinite linear;
-    }
-  }
-
-  &__greeting {
-    /* animation:@keyframes duration | easing-function | delay |
-iteration-count | direction | fill-mode | play-state | name */
-    &-alex {
-      // animation: moveInLeft var(--left-animation) ease-out;
-    }
-    &-meet {
-      padding-bottom: 1rem;
-      // opacity: 0;
-      // animation: moveInRight calc(var(--left-animation) * 2.5) ease-out;
     }
   }
 
@@ -105,7 +82,7 @@ iteration-count | direction | fill-mode | play-state | name */
     transition: all 0.3s;
     box-shadow: 0 1rem 2rem var(--img-shadow);
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 700px) {
       width: 90%;
       height: auto;
       box-shadow: none;
