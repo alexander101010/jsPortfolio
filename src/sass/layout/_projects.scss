@@ -7,8 +7,8 @@
 }
 
 .projects__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
   grid-gap: 6rem;
   display: flex;
   justify-content: space-evenly;
@@ -16,10 +16,6 @@
   align-content: space-around; // aligns rows of wrapped content
 
   margin: 10rem;
-  // grid-column: center-start / center-end;
-  // display: flex;
-  // flex-wrap: wrap;
-  // max-width: 1140px;
 
   @media only screen and (max-width: 600px) {
     margin: 8rem 0;
