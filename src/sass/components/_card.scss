@@ -3,8 +3,8 @@
   perspective: 150rem; // on the parent
   -moz-perspective: 150rem; // prefix needed to make it work on mozilla firefox as well
   position: relative;
-  width: 40rem;
-  height: 65rem;
+  width: 50rem;
+  height: 75rem;
 
   &:hover {
     box-shadow: none;
@@ -21,7 +21,7 @@
   //front and back styles//
   &__side {
     // height: var(--card-height); //TODO: move height to outside dynamic class
-    height: 65rem;
+    height: 75rem;
 
     transition: all 0.8s ease;
     // font-size: 2rem;
@@ -75,6 +75,15 @@
       font-size: 1.8rem;
       padding: 1.5rem 3rem;
       color: var(--text-paragraph);
+    }
+
+    &__flip-icon {
+      color: var(--accent);
+      font-size: 2rem;
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      transform: rotateY(180deg);
     }
   }
 
@@ -131,7 +140,7 @@
   // *** DISABLE CARD FLIP ON MOBILE /////////////////////////////////
   // *************************************************************
   @media screen and (max-width: 700px) {
-    width: 40rem;
+    width: 90%;
     height: auto;
 
     &:hover {
@@ -164,6 +173,10 @@
         background-color: var(--main-bg-light);
         background-image: none;
       }
+    }
+
+    &-details__flip-icon {
+      display: none;
     }
 
     // links/buttons on back of card
@@ -207,5 +220,93 @@
         font-size: 30px;
       }
     }
+  }
+  /* smartphones, touchscreens */
+  @media (hover: none) and (pointer: coarse) {
+    // width: 90%;
+    height: auto;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:hover &__side-front {
+      transform: rotateY(0);
+    }
+
+    &:hover &__side-back {
+      transform: rotateY(0);
+    }
+
+    //front and back styles//
+    &__side {
+      height: auto;
+      position: relative;
+
+      &-front {
+        background-color: var(--main-bg-light);
+        border: none;
+      }
+
+      &-back {
+        transform: rotateY(0);
+        border: none;
+
+        border-bottom: 2px solid var(--accent);
+        background-color: var(--main-bg-light);
+        background-image: none;
+      }
+    }
+
+    &-details__flip-icon {
+      display: none;
+    }
+
+    // links/buttons on back of card
+    &__links {
+      display: none;
+    }
+
+    &__links-mobile {
+      display: flex;
+      margin: 1rem 2rem 3rem 2rem;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        border-radius: 20px;
+
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        background-color: var(--card-title-bg);
+        border: 1px solid var(--accent);
+        padding: 1rem 2rem;
+        color: var(--card-title-text);
+      }
+    }
+
+    //
+    &__stack {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin: 0;
+      padding: 2rem;
+      border-radius: none;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &__lang {
+      font-size: 30px;
+      padding: 0 0.25rem;
+      &-small {
+        font-size: 30px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1800px) {
+    width: 90%;
+    height: auto;
   }
 }
