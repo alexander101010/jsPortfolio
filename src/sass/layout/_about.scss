@@ -6,11 +6,12 @@
   background-color: var(--main-bg-light);
   display: flex;
   flex-direction: column;
-  // justify-content: space-evenly;
-  align-items: center;
+  justify-content: space-evenly;
+  // align-items: center;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     // justify-content: space-evenly;
+    min-height: 90vh;
   }
 }
 
@@ -20,6 +21,12 @@
 
   &__text {
     margin-top: 5rem;
+    @media screen and (max-width: 600px) {
+      margin-top: 2rem;
+      font-size: 2.2rem;
+      // text-align: left;
+      // hyphens: auto;
+    }
   }
 
   &__paragraph {
@@ -31,9 +38,15 @@
     hyphens: auto;
     line-height: 1.5;
 
-    @media screen and (max-width: 700px) {
-      // margin: 4rem 3rem;
-      font-size: 2.8rem;
+    &:last-child {
+      margin-bottom: 10rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin: 3rem 3rem;
+      font-size: 2.2rem;
+      // text-align: left;
+      // hyphens: auto;
     }
   }
 }
