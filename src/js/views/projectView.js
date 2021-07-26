@@ -10,6 +10,7 @@ export const renderProjectCard = function (project, target) {
         <div class="card-details">
           <h3 class="card-details__title">${capitalize(project.title)}</h3>
           <p class="card-details__description">${project.description}</p>
+          <i class="fas fa-redo-alt card-details__flip-icon"></i>
         </div>
       </div>
       <div class="card__side card__side-back">
