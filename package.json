@@ -29,5 +29,13 @@
   "bugs": {
     "url": "https://github.com/alexander101010/jsPortfolio/issues"
   },
-  "homepage": "https://github.com/alexander101010/jsPortfolio#readme"
+  "homepage": "https://github.com/alexander101010/jsPortfolio",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "cheerio": "^1.0.0-rc.10",
+    "puppeteer": "^10.1.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
 }
