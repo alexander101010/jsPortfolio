@@ -956,7 +956,8 @@ input:checked + .slider:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--header-border); }
+    background-color: var(--header-border);
+    transition: all 0.5s; }
   .nav__name {
     color: var(--text-nav-name); }
   .nav__link {
