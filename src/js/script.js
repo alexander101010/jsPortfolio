@@ -5,8 +5,8 @@ import { smoothScroll, uncheckInput } from './helpers.js';
 
 const nav = document.querySelector('#nav');
 // const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
-const mobileNavLinkAbout = document.querySelectorAll('.mobile-nav__link-about');
-const mobileNavLinkProjects = document.querySelectorAll(
+const mobileNavLinkAbout = document.querySelector('.mobile-nav__link-about');
+const mobileNavLinkProjects = document.querySelector(
   '.mobile-nav__link-projects'
 );
 const localMobileNavLinks = [mobileNavLinkAbout, mobileNavLinkProjects];
