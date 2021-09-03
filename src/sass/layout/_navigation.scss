@@ -20,11 +20,9 @@
     justify-content: flex-end;
   }
 
-  @media only screen and (min-width: 1800px) {
-    border-bottom: 2px solid var(--header-border);
-    position: absolute;
-    top: 0;
-  }
+  // @media only screen and (min-width: 1800px) {
+  //   border-bottom: 2px solid var(--header-border);
+  // }
 
   &__name-box {
     height: 8rem;
