@@ -141,7 +141,8 @@
   // *************************************************************
   @media screen and (max-width: 700px) {
     width: 90%;
-    // height: auto;
+    height: auto;
+    // height: 80rem;
 
     &:hover {
       box-shadow: none;
@@ -157,12 +158,12 @@
 
     //front and back styles//
     &__side {
-      height: auto;
       position: relative;
 
       &-front {
         background-color: var(--main-bg-light);
         border: none;
+        height: auto; // TODO:
       }
 
       &-back {
@@ -172,6 +173,8 @@
         border-bottom: 2px solid var(--accent);
         background-color: var(--main-bg-light);
         background-image: none;
+        margin-bottom: 3rem;
+        height: auto; // TODO:
       }
     }
 
