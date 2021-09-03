@@ -4,7 +4,12 @@ import { updateTheme } from './updateTheme.js';
 import { smoothScroll, uncheckInput } from './helpers.js';
 
 const nav = document.querySelector('#nav');
-const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+// const mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+const mobileNavLinkAbout = document.querySelectorAll('.mobile-nav__link-about');
+const mobileNavLinkProjects = document.querySelectorAll(
+  '.mobile-nav__link-projects'
+);
+const localMobileNavLinks = [mobileNavLinkAbout, mobileNavLinkProjects];
 const navInput = document.querySelector('#navi-toggle');
 
 const projectContainer = document.querySelector('.projects__container');
@@ -102,7 +107,7 @@ const mobileHamAboutBtn = document.querySelector('.mobile-nav__link-about');
 smoothScroll(mobileHamProjectsBtn, projectsSection);
 smoothScroll(mobileHamAboutBtn, aboutMeSection);
 
-mobileNavLinks.forEach(link => {
+localMobileNavLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
     uncheckInput(navInput);
@@ -110,3 +115,8 @@ mobileNavLinks.forEach(link => {
     // // sections[link.dataset.section].scrollIntoView({ behavior: 'smooth' });
   });
 });
+
+// const mobileNavLinkAbout = document.querySelectorAll('.mobile-nav__link-about');
+// const mobileNavLinkProjects = document.querySelectorAll(
+//   '.mobile-nav__link-projects'
+// );
