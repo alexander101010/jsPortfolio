@@ -1,5 +1,5 @@
 .footer {
-  min-height: 15rem;
+  min-height: 20rem;
   width: 100%;
   background-color: var(--main-bg);
   display: flex;
@@ -49,13 +49,6 @@
     }
   }
 
-  &__list {
-    list-style: none;
-    @media screen and (max-width: 600px) {
-      display: flex;
-      flex-direction: column;
-    }
-  }
   @media screen and (max-width: 600px) {
     &__item {
       display: block;
@@ -115,6 +108,9 @@
     // font-size: 1.8rem;
     @media screen and (max-width: 1040px) {
       padding-top: 2rem;
+      &:last-child {
+        margin-bottom: 3rem;
+      }
     }
   }
 }
