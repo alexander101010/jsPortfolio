@@ -51,6 +51,7 @@ export const renderIcons = stackArr => {
     ruby: `<i title="Ruby" class="devicon-ruby-plain-wordmark card__lang  ${smaller}"></i>`,
     rubyOnRails: `<i title="Ruby on Rails" class="devicon-rails-plain-wordmark card__lang  ${smaller}"></i>`,
     react: `<i title="React" class="devicon-react-original-wordmark card__lang  ${smaller}"></i>`,
+    nextjs: `<i title="NextJS" class="devicon-nextjs-original card__lang  ${smaller}"></i>`,
     sass: `<i title="Sass" class="devicon-sass-original card__lang  ${smaller}"></i>`,
     nodeJS: `<i title="Node.js" class="devicon-nodejs-plain-wordmark card__lang  ${smaller}"></i>`,
     git: `<i title="Git" class="devicon-git-plain card__lang  ${smaller}"></i>`,
