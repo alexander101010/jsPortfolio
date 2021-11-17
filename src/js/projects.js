@@ -3,12 +3,12 @@ export const projects = [
     title: 'e-commerce app',
     id: 'ecommercenextjs',
     url: 'https://ecommerce-next-frontendmentor-git-master-alexander101010.vercel.app/',
-    repo: '',
+    repo: 'https://github.com/alexander101010/ecommerce-next-frontendmentor',
     description:
-      'Frontend Mentor challenge and design. Used NextJS to build a responsive react application that handles application cart state with useContext hook.',
+      'Frontend Mentor challenge and design. Used NextJS to build a responsive react application that handles application cart state with useContext. Deployed the app with Vercel and styled react components with (s)css modules.',
     stack: ['react', 'nextjs', 'javaScript', 'nodeJS', 'sass'],
     imagePath: 'ecommerce.png',
-    imageDescription: 'Image of calculator',
+    imageDescription: 'Image of e-commerce sneakers',
   },
   {
     title: 'calculator app',
